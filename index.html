@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rumbo Colombia: agencia de viajes con paquetes turísticos a los mejores destinos de Colombia.">
+  <title>Rumbo Colombia | Agencia de viajes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO Y MENÚ DE NAVEGACIÓN -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#inicio" class="logo" aria-label="Rumbo Colombia - Inicio">
+        <img src="img/logo.svg" alt="" width="40" height="40">
+        <span>Rumbo Colombia</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menuPrincipal">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="menuPrincipal" class="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#destinos">Destinos</a></li>
+          <li><a href="#paquetes">Paquetes</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#faq">Preguntas</a></li>
+          <li><a href="#contacto" class="btn btn-small">Cotizar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- PÁGINA DE INICIO / HERO -->
+    <section id="inicio" class="hero">
+      <div class="container hero-content">
+        <p class="eyebrow">Agencia de viajes · Colombia</p>
+        <h1>Descubre Colombia a tu ritmo</h1>
+        <p class="hero-text">Paquetes turísticos claros, con precios transparentes y acompañamiento antes, durante y después de tu viaje.</p>
+        <div class="hero-actions">
+          <a href="#destinos" class="btn">Ver destinos</a>
+          <a href="#contacto" class="btn btn-outline">Solicitar cotización</a>
+        </div>
+        <ul class="hero-stats">
+          <li><strong>6</strong> destinos</li>
+          <li><strong>+1.200</strong> viajeros</li>
+          <li><strong>4,8/5</strong> satisfacción</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- DESTINOS (con filtro interactivo) -->
+    <section id="destinos" class="section">
+      <div class="container">
+        <header class="section-head">
+          <h2>Destinos que te esperan</h2>
+          <p>Filtra por el tipo de experiencia que buscas.</p>
+        </header>
+
+        <div class="filters" role="group" aria-label="Filtrar destinos">
+          <button class="filter-btn active" data-filter="todos">Todos</button>
+          <button class="filter-btn" data-filter="playa">Playa</button>
+          <button class="filter-btn" data-filter="naturaleza">Naturaleza</button>
+          <button class="filter-btn" data-filter="cultura">Cultura</button>
+        </div>
+
+        <div class="cards-grid" id="gridDestinos">
+          <article class="card" data-category="playa">
+            <img src="img/cartagena.svg" alt="Murallas y atardecer en Cartagena de Indias" loading="lazy">
+            <div class="card-body">
+              <span class="tag">Playa · Cultura</span>
+              <h3>Cartagena de Indias</h3>
+              <p>Ciudad amurallada, islas del Rosario y gastronomía caribeña.</p>
+            </div>
+          </article>
+          <article class="card" data-category="playa">
+            <img src="img/sanandres.svg" alt="Mar de siete colores en San Andrés" loading="lazy">
+            <div class="card-body">
+              <span class="tag">Playa</span>
+              <h3>San Andrés</h3>
+              <p>El mar de los siete colores, buceo y cayos de arena blanca.</p>
+            </div>
+          </article>
+          <article class="card" data-category="naturaleza">
+            <img src="img/tayrona.svg" alt="Selva y costa del Parque Tayrona" loading="lazy">
+            <div class="card-body">
+              <span class="tag">Naturaleza · Playa</span>
+              <h3>Santa Marta y Tayrona</h3>
+              <p>Senderos entre selva y mar dentro del parque nacional.</p>
+            </div>
+          </article>
+          <article class="card" data-category="naturaleza">
+            <img src="img/cafe.svg" alt="Paisaje cafetero con palmas de cera del Valle de Cocora" loading="lazy">
+            <div class="card-body">
+              <span class="tag">Naturaleza · Cultura</span>
+              <h3>Eje Cafetero</h3>
+              <p>Fincas cafeteras, Valle de Cocora y pueblos de colores.</p>
+            </div>
+          </article>
+          <article class="card" data-category="cultura">
+            <img src="img/medellin.svg" alt="Montañas y ciudad de Medellín" loading="lazy">
+            <div class="card-body">
+              <span class="tag">Cultura</span>
+              <h3>Medellín y Guatapé</h3>
+              <p>Innovación urbana, comuna 13 y el embalse de Guatapé.</p>
+            </div>
+          </article>
+          <article class="card" data-category="naturaleza">
+            <img src="img/amazonas.svg" alt="Río y selva amazónica" loading="lazy">
+            <div class="card-body">
+              <span class="tag">Naturaleza</span>
+              <h3>Amazonas (Leticia)</h3>
+              <p>Navegación por el río, comunidades indígenas y avistamiento de fauna.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAQUETES -->
+    <section id="paquetes" class="section section-alt">
+      <div class="container">
+        <header class="section-head">
+          <h2>Paquetes de viaje</h2>
+          <p>Todos incluyen tiquetes, alojamiento, traslados y asistencia.</p>
+        </header>
+        <div class="packages">
+          <article class="package">
+            <h3>Express</h3>
+            <p class="price">$ 890.000 <small>COP / persona</small></p>
+            <ul>
+              <li>3 días · 2 noches</li>
+              <li>Hotel 3 estrellas</li>
+              <li>Desayunos incluidos</li>
+              <li>Traslados aeropuerto</li>
+            </ul>
+            <a href="#contacto" class="btn btn-outline" data-paquete="Express">Elegir</a>
+          </article>
+          <article class="package featured">
+            <span class="badge">Más popular</span>
+            <h3>Aventura</h3>
+            <p class="price">$ 1.790.000 <small>COP / persona</small></p>
+            <ul>
+              <li>5 días · 4 noches</li>
+              <li>Hotel 4 estrellas</li>
+              <li>Desayunos y 2 cenas</li>
+              <li>2 tours guiados</li>
+            </ul>
+            <a href="#contacto" class="btn" data-paquete="Aventura">Elegir</a>
+          </article>
+          <article class="package">
+            <h3>Premium</h3>
+            <p class="price">$ 3.250.000 <small>COP / persona</small></p>
+            <ul>
+              <li>7 días · 6 noches</li>
+              <li>Hotel 5 estrellas</li>
+              <li>Todo incluido</li>
+              <li>Guía privado</li>
+            </ul>
+            <a href="#contacto" class="btn btn-outline" data-paquete="Premium">Elegir</a>
+          </article>
+        </div>
+        <p class="note">* Precios de referencia sujetos a temporada y disponibilidad.</p>
+      </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section id="nosotros" class="section">
+      <div class="container">
+        <header class="section-head">
+          <h2>¿Por qué viajar con nosotros?</h2>
+          <p>Resolvemos los problemas más comunes al planear un viaje por cuenta propia.</p>
+        </header>
+        <div class="features">
+          <article class="feature">
+            <div class="icon" aria-hidden="true">💰</div>
+            <h3>Precios claros</h3>
+            <p>Sin costos ocultos: sabes qué incluye cada paquete antes de pagar.</p>
+          </article>
+          <article class="feature">
+            <div class="icon" aria-hidden="true">🧭</div>
+            <h3>Guías locales</h3>
+            <p>Conocen cada región y te llevan más allá de lo típico.</p>
+          </article>
+          <article class="feature">
+            <div class="icon" aria-hidden="true">🛟</div>
+            <h3>Asistencia 24/7</h3>
+            <p>Te acompañamos durante todo el viaje ante cualquier imprevisto.</p>
+          </article>
+          <article class="feature">
+            <div class="icon" aria-hidden="true">🗓️</div>
+            <h3>Flexibilidad</h3>
+            <p>Cambios de fecha y planes a la medida de tu grupo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERÍA (con visor ampliado) -->
+    <section id="galeria" class="section section-alt">
+      <div class="container">
+        <header class="section-head">
+          <h2>Galería de viajeros</h2>
+          <p>Haz clic en una imagen para verla más grande.</p>
+        </header>
+        <div class="gallery" id="gallery">
+          <figure><img src="img/cartagena.svg" alt="Cartagena al atardecer" loading="lazy"><figcaption>Cartagena</figcaption></figure>
+          <figure><img src="img/sanandres.svg" alt="Mar de San Andrés" loading="lazy"><figcaption>San Andrés</figcaption></figure>
+          <figure><img src="img/tayrona.svg" alt="Costa del Tayrona" loading="lazy"><figcaption>Tayrona</figcaption></figure>
+          <figure><img src="img/cafe.svg" alt="Paisaje cafetero" loading="lazy"><figcaption>Eje Cafetero</figcaption></figure>
+          <figure><img src="img/medellin.svg" alt="Medellín entre montañas" loading="lazy"><figcaption>Medellín</figcaption></figure>
+          <figure><img src="img/amazonas.svg" alt="Río Amazonas" loading="lazy"><figcaption>Amazonas</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES (elementos desplegables) -->
+    <section id="faq" class="section">
+      <div class="container narrow">
+        <header class="section-head">
+          <h2>Preguntas frecuentes</h2>
+        </header>
+        <details>
+          <summary>¿Cómo reservo un paquete?</summary>
+          <p>Completa el formulario de cotización. Un asesor te contactará en menos de 24 horas con la propuesta y el enlace de pago.</p>
+        </details>
+        <details>
+          <summary>¿Puedo cambiar las fechas de mi viaje?</summary>
+          <p>Sí, puedes reprogramar hasta 15 días antes del viaje, sujeto a disponibilidad.</p>
+        </details>
+        <details>
+          <summary>¿Los paquetes incluyen tiquetes aéreos?</summary>
+          <p>Sí, los paquetes incluyen tiquetes desde las principales ciudades del país.</p>
+        </details>
+        <details>
+          <summary>¿Viajan niños y mascotas?</summary>
+          <p>Los niños viajan con tarifa especial. Para mascotas consulta la política de cada destino.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CONTACTO / FORMULARIO -->
+    <section id="contacto" class="section section-dark">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <h2>Cotiza tu viaje</h2>
+          <p>Cuéntanos a dónde quieres ir y te enviamos una propuesta personalizada.</p>
+          <ul class="contact-list">
+            <li>📍 Bogotá, Colombia</li>
+            <li>📞 +57 300 000 0000</li>
+            <li>✉️ hola@rumbocolombia.example</li>
+          </ul>
+        </div>
+
+        <form id="formCotizacion" class="form" novalidate>
+          <div class="field">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="field">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="destino">Destino</label>
+              <select id="destino" name="destino" required>
+                <option value="">Selecciona…</option>
+                <option>Cartagena de Indias</option>
+                <option>San Andrés</option>
+                <option>Santa Marta y Tayrona</option>
+                <option>Eje Cafetero</option>
+                <option>Medellín y Guatapé</option>
+                <option>Amazonas (Leticia)</option>
+              </select>
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="field">
+              <label for="paquete">Paquete</label>
+              <select id="paquete" name="paquete" required>
+                <option value="">Selecciona…</option>
+                <option>Express</option>
+                <option>Aventura</option>
+                <option>Premium</option>
+              </select>
+              <small class="error" aria-live="polite"></small>
+            </div>
+          </div>
+          <div class="field">
+            <label for="personas">Número de personas</label>
+            <input type="number" id="personas" name="personas" min="1" max="20" value="2" required>
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="field">
+            <label for="mensaje">Mensaje (opcional)</label>
+            <textarea id="mensaje" name="mensaje" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn">Enviar solicitud</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Rumbo Colombia. Proyecto académico - Ingeniería Web I.</p>
+      <nav aria-label="Enlaces del pie de página">
+        <a href="#inicio">Inicio</a>
+        <a href="#destinos">Destinos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Visor de galería -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">&times;</button>
+    <img src="" alt="" id="lightboxImg">
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
